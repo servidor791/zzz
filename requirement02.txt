@@ -1,0 +1,106 @@
+#!bin/bash
+#creador
+clear
+sleep 2
+echo -e "\e[1;32m"
+echo "GENERADOR DE PAYLOAD V2"
+echo ""
+echo ""
+sleep 2
+echo -e "\e[1;33m _______________ \e[1;36m"
+echo -e "\e[1;33m< GabrielPerez > \e[1;36m"
+echo -e "\e[1;33m---------------- \e[1;36m"
+echo ""
+echo ""
+sleep 2
+echo -e "\e[1;32m  _____   __     ___      ____          _____ \e[1;36m"
+sleep 1
+echo -e "\e[1;32m |  __ \ /\\ \   / / |    / __ \   /\   |  __ \ \e[1;36m"
+sleep 1
+echo -e "\e[1;32m | |__) /  \\ \_/ /| |   | |  | | /  \  | |  | | \e[1;36m"
+sleep 1
+echo -e "\e[1;32m |  ___/ /\ \\   / | |   | |  | |/ /\ \ | |  | | \e[1;36m"
+sleep 1
+echo -e "\e[1;32m | |  / ____ \| | | |___| |__| / ____ \| |__| | \e[1;36m"
+sleep 1
+echo -e "\e[1;32m |_| /_/    \_\_| |______\____/_/    \_\_____/ \e[1;36m"
+echo ""
+echo ""
+sleep 2
+echo -ne "\e[1;33mHOST: \e[1;36m"
+read host
+sleep 2
+clear
+echo ""
+sleep 2
+echo -e "\e[1;32m  _____   __     ___      ____          _____ \e[1;36m"
+echo -e "\e[1;32m |  __ \ /\\ \   / / |    / __ \   /\   |  __ \ \e[1;36m"
+echo -e "\e[1;32m | |__) /  \\ \_/ /| |   | |  | | /  \  | |  | | \e[1;36m"
+echo -e "\e[1;32m |  ___/ /\ \\   / | |   | |  | |/ /\ \ | |  | | \e[1;36m"
+echo -e "\e[1;32m | |  / ____ \| | | |___| |__| / ____ \| |__| | \e[1;36m"
+echo -e "\e[1;32m |_| /_/    \_\_| |______\____/_/    \_\_____/ \e[1;36m"
+sleep 2
+echo ""
+echo ""
+echo -e "\e[1;30m"
+echo "Normal"
+echo ""
+sleep 2
+echo -e "\e[1;32m"
+echo "CONNECT [host_port] [protocol][crlf]Host: $host[crlf][crlf]"
+echo ""
+sleep 2
+echo -e "\e[1;30m"
+echo "Front Inject"
+echo ""
+sleep 2
+echo -e "\e[1;32m"
+echo "GET http://$host/ HTTP/1.1[crlf]Host: $host[crlf][crlf]CONNECT [host_port] [protocol][crlf][crlf]"
+echo ""
+sleep 2
+echo -e "\e[1;30m"
+echo "Back Inject"
+echo ""
+sleep 2
+echo -e "\e[1;32m"
+echo "CONNECT [host_port] HTTP/1.1[crlf][crlf]GET http://$host/ [protocol][crlf]Host: $host[crlf][crlf]"
+echo ""
+sleep 2
+echo -e "\e[1;30m"
+echo "Front Query"
+echo ""
+sleep 2
+echo -e "\e[1;32m"
+echo "CONNECT $host@[host_port][crlf]GET http://$host/ [protocol][crlf]Host: $host[crlf][crlf]"
+echo ""
+sleep 2
+echo -e "\e[1;30m"
+echo "Back Query"
+echo ""
+sleep 2
+echo -e "\e[1;32m"
+echo "CONNECT [host_port]@$host[crlf]GET http://$host/ [protocol][crlf]Host: $host[crlf][crlf]"
+echo ""
+sleep 2
+echo -e "\e[1;30m"
+echo "Otros payload"
+echo ""
+sleep 2
+echo -e "\e[1;32m"
+echo "GET http://$host/ HTTP/1.1[crlf]Host: $host[crlf]CONNECT [host_port][protocol][crlf]Connection: Keep-Alive[ua][crlf]User-Agent: @cert.int-x3.letsencrypt.org
+[crlf]CONNECT 127.0.0.1:1089[host_port][crlf]"
+echo ""
+sleep 2
+echo -e "\e[1;32m"
+echo "CONNECT [host_port]@$host HTTP/1.0[crlf]Host: $host[crlf]X-Online-Host: $host[crlf]X-Forward-Host: $host[crlf]X-Forwarded-For: $host[crlf]
+Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]CONNECT [host_port] HTTP/1.0[crlf][crlf]"
+echo ""
+echo ""
+sleep 2
+echo "PRESIONE ENTER PARA SALIR"
+read ENTER
+sleep 2
+cd ..
+bash mundonetfree.sh
+clear
+#codigo
