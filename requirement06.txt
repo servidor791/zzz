@@ -1,0 +1,7 @@
+#!bin/bash
+#creador
+git clone https://github.com/Darkmux/RootTH
+cd RootTH
+chmod 777 RootTH.sh
+clear
+./RootTH.sh
