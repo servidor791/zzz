@@ -1,0 +1,12 @@
+#!bin/bash
+#creador
+pkg install ngrok
+pkg install openssh
+pkg install python
+pkg install python2
+git clone https://github.com/jhondoeelmisterio/SocialHacks
+cd SocialHacks
+python SocialHacks.py
+cd ..
+cd ..
+bash mundocraker.sh
